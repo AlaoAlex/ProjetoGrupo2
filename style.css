@@ -1,6 +1,142 @@
+:root{
+    --whiteColor: #fff;
+    --paddingPadrao: 1.5% 2.5%;
+    --fontePadrao: "Roboto", Arial, Helvetica, sans-serif;
+    --fontePesada: "Bebas Neue", Arial, Helvetica, sans-serif;
+    --transicaoPadrao: 0.5s;
+}
+
 *{
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fontePadrao);
+}
+img{
+    width: 50%;
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+.hero, header, .sobre, .cardapio{
+    padding: var(--paddingPadrao);
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+.hero{
+    background-image: linear-gradient(rgba(0,0,0,0.5)), url(img/Bar\ do\ Tigrão\ faixada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.hero h1{
+    color: var(--whiteColor);
+    margin-top: 40vh;
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+header{
+    /* background: linear-gradient(to left, rgba(118,0,0,0.9), rgba(0,0,0)); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header img{
+    width: 100%;
+    max-width: 50px;
+}
+.nav-list{
+    /* background-color: green; */
+    display: flex;
+    gap: 50px
+}
+.nav-list a{
+    font-family: var(--fontePesada);
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--whiteColor);
+    border-bottom: 2px solid transparent;
+    transition: var(--transicaoPadrao);
+}
+.nav-list a:hover{
+    transform: scale(1.1);
+        border-bottom: 2px solid orangered;
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+.sobre{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, rgba(118,0,0,0.7), rgba(0,0,0)), url(img/Papel\ de\ Parede\ 500x.png);
+    color: var(--whiteColor);
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+.sobre-esquerda{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex: 1;
+}
+#cachaca{
+    width: 100%;
+    max-width: 350px;
+}
+.sobre-direita{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: right;
+    width: 100%;
+    max-width: 900px;
+}
+.sobre-direita h2{
+    color: orange;
+    font-size: 8rem;
+    font-family: var(--fontePesada);
+    letter-spacing: 15px;
+}
+.sobre-direita p{
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+.cardapio{
+    /* background: red; */
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.cardapio h2{
+    /* color: red; */
+    font-size: 8rem;
+    font-family: var(--fontePesada);
+    letter-spacing: 15px;
+}
+.cardapio-colunas{
+    display: flex;
+    width: 100%;
+}
+.cardapio-esquerda{
+    background-color: green;
+    flex: 1;
+}
+.cardapio-direita{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    flex: 1;
+}
+.cardapio-alcool, .cardapio-entradas, .cardapio-doces{
+    height: 100px;
 }
