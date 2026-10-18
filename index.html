@@ -12,10 +12,17 @@
     <body>
         <div class="container">
             <div class="hero" id="home">
-                <h1>Texto de teste</h1>
+                <h1>Bar do Tigrão</h1>
+                <p>
+                    Cerveja gelada, petisco na mesa e resenha sem hora pra acabar! <br>
+                    Venha fazer parte do Bar do Tigrão.
+                </p>
+                <button class="hero-btn">
+                    <a href="#cardapio">Conheça nosso cardápio</a>
+                </button>
             </div>
             <header>
-                <img src="img/PNG Tigre.png" alt="Logo do Tigrão">
+                <img src="img/tigre-icone.png" alt="Logo do Tigrão">
                 <nav class="nav-list">
                     <a href="#home">Home</a>
                     <a href="#sobre">Sobre</a>
@@ -44,57 +51,84 @@
                     <div class="cardapio-colunas">
                         <div class="cardapio-esquerda">
                             <div class="cardapio-feijoada">
-                            <!-- <img src="img/cardapio-feijoada.png" alt="Imagem de Feijoada"> -->
                             <p>PRATO DO DIA</p>
                             <button class="cardapio-btn">VER MAIS</button>
                             </div>
                         </div>
                         <div class="cardapio-direita">
                             <div class="cardapio-alcool">
-                                <!-- <img src="img/cardapio-alcool.png" alt="Bebidas"> -->
                                 <p>BEBIDAS</p>
                                 <button class="cardapio-btn">VER MAIS</button>
                             </div>
                             <div class="cardapio-entradas">
-                                <!-- <img src="img/cardapio-entradas.png quentes e tira gostos.png" alt="Apelitivos"> -->
                                 <p>PRATOS QUENTES E TIRA GOSTOS</p>
                                 <button class="cardapio-btn">VER MAIS</button>
                             </div>
                             <div class="cardapio-doces">
-                                <!-- <img src="img/cardapio-doces.png" alt="Doces e salgados"> -->
                                 <p>VARIADOS</p>
                                 <button class="cardapio-btn">VER MAIS</button>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id="eventos">
+                <section id="eventos" class="eventos">
                     <h2>EVENTOS</h2>
-    
-                    <img src="img/Dominó.png" alt="Dominó">
-                    <p>Campeonato de Dominó</p><button>INSCREVER-SE</button><br>
-    
-                    <img src="img/Sinuca.png" alt="Sinuca">
-                    <p>Campeonato de Sinuca</p><button>INSCREVER-SE</button><br>
-    
-                    <img src="img/Truco.png" alt="Truco">
-                    <p>Campeonato de Truco</p><button>INSCREVER-SE</button>
-                </section><br>
-                <!--Decidam se vai ter aba de reservas pfv-->
-                <section id="reservas">
-                    <h2>Reservas</h2>
-                </section><br>
+                    <div class="eventos-colunas">
+                        <div class="eventos-esquerda">
+                            <!-- <img src="img/Dominó.png" alt="Dominó"> -->
+                            <p>Campeonato de Dominó</p>
+                            <button class="eventos-btn">INSCREVER-SE</button>
+                        </div>
+                        <div class="eventos-centro">
+                            <!-- <img src="img/Sinuca.png" alt="Sinuca"> -->
+                            <p>Campeonato de Sinuca</p>
+                            <button class="eventos-btn">INSCREVER-SE</button>
+                        </div>
+                        <div class="eventos-direita">
+                            <!-- <img src="img/Truco.png" alt="Truco"> -->
+                            <p>Campeonato de Truco</p>
+                            <button class="eventos-btn">INSCREVER-SE</button>
+                        </div>
+                    </div>
             </main>
             <footer>
-                <p>Rodapé</p>
-                <img src="img/img tigre mascote.png" alt="Foto do mascote">
-                <h4>Bar do Tigrão</h4>
-                <p>&#169 2026 Bar do Tigrão. Todos os direitos reservados.</p>
-                <p>Políticas</p>
-                <p>Confira nossas redes sociais</p>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-whatsapp"></i>
-                <i class="fa-brands fa-x-twitter"></i>
+                <div class="footer-superior">
+                    <img src="img/tigre-mascote.png" alt="Foto do mascote">
+                    <div class="horario">
+                        <h3>Horario de  Funcionamento</h3>
+                        <p>
+                            Segunda a Sexta: 06h ás 01h <br>
+                            Sábado e Domingo: 07h ás 03h
+                        </p>
+                    </div>
+                    <div class="localizacao">
+                        <h3>Localização</h3>
+                        <p>
+                            Jardim Biqueira do Tigre Bolado, 67 <br>
+                            Complexo do Alemão, Rio de Janeiro <br>
+                            RJ, 21061-610
+                        </p>
+                    </div>
+                    <div class="contato">
+                        <h3>Contato</h3>
+                        <p>
+                            (21) 95489 6767
+                        </p>
+                    </div>
+                    <div class="redes">
+                        <h3>Confira nossas redes sociais</h3>
+                        <div class="footer-icones">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-inferior">
+                    <p>&#169 2026 Bar do Tigrão. Todos os direitos reservados.</p>
+                    <p>Políticas do bar</p>
+                </div>                
+                
             </footer>
         </div>
         <script src="https://kit.fontawesome.com/b484a076f7.js" crossorigin="anonymous"></script>

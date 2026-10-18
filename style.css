@@ -4,6 +4,7 @@
     --paddingPadrao: 1.5% 2.5%;
     --fontePadrao: "Roboto", Arial, Helvetica, sans-serif;
     --fontePesada: "Bebas Neue", Arial, Helvetica, sans-serif;
+    --fonteLogo: "Croissant One", Arial, Helvetica, sans-serif;
 }
 *{
     margin: 0;
@@ -13,25 +14,49 @@
 }
 body{
     font-family: var(--fontePadrao);
+    user-select: none;
 }
 img{
     width: 50%;
 }
 /* ------------------------------------------------------------------------------------------------------------------- */
-.hero, header, .sobre, .cardapio{
+.hero, header, .sobre, .cardapio, .eventos, footer{
     padding: var(--paddingPadrao);
 }
 /* ------------------------------------------------------------------------------------------------------------------- */
 .hero{
-    background-image: linear-gradient(rgba(0,0,0,0.5)), url(img/Bar\ do\ Tigrão\ faixada.png);
+    background-image: linear-gradient(rgba(0,0,0,0.75)), url(img/barDoTigrao-banner.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
 }
 .hero h1{
-    color: var(--whiteColor);
+    color: orange;
     margin-top: 40vh;
+    font-family: var(--fonteLogo);
+    font-size: 100px;
+}
+.hero p{
+    color: var(--whiteColor);
+    font-family: var(--fontePesada);
+    font-size: 40px;
+}
+.hero a{
+    text-decoration: none;
+    color: var(--whiteColor);
+    text-transform: uppercase;
+}
+.hero-btn{
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    transform: scale(1.1);
 }
 /* ------------------------------------------------------------------------------------------------------------------- */
 header{
@@ -42,6 +67,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 99;
 }
 header img{
     width: 100%;
@@ -72,7 +98,7 @@ header img{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: linear-gradient(to right, rgba(118,0,0,0.7), rgba(0,0,0)), url(img/Papel\ de\ Parede\ 500x.png);
+    background-image: linear-gradient(to right, rgba(118,0,0,0.7), rgba(0,0,0)), url(img/papelDeParede.png);
     color: var(--whiteColor);
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;
@@ -96,7 +122,7 @@ header img{
     max-width: 900px;
 }
 .sobre-direita h2{
-    color:  orange;
+    color:  var(--whiteColor);
     font-size: 8rem;
     font-family: var(--fontePesada);
     letter-spacing: 15px;
@@ -107,23 +133,21 @@ header img{
 }
 /* ------------------------------------------------------------------------------------------------------------------- */
 .cardapio{
-    /* background: red; */
     width: 100%;
-    /* height: 90vh; */
+    background-color: #e4d5d5;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 .cardapio h2{
-    /* color: red; */
+    color: red;
     font-size: 8rem;
     font-family: var(--fontePesada);
     letter-spacing: 15px;
 }
 .cardapio-colunas{
     display: flex;
-    justify-content: space-between;
-    /* gap: 50px; */
+    /* justify-content: space-between; */
+    gap: 40px;
     width: 100%;
 }
 .cardapio-esquerda{
@@ -132,7 +156,6 @@ header img{
 }
 .cardapio-feijoada{
     background-image: url(img/cardapio-feijoada.png);
-    /* background-position-y: center; */
     background-size: cover;
     height: 544px;
     border-radius: 10px;
@@ -143,18 +166,37 @@ header img{
     width: 100%;
     max-width: 680px;
     justify-content: space-between;
-    /* gap: 10px; */
 }
 .cardapio-alcool, .cardapio-entradas, .cardapio-doces{
     height: 140px;
     border-radius: 10px;
-    background-color: red;
+}
+.cardapio-alcool{
+    background-image: url(img/cardapio-alcool.png);
+    background-size: cover;
+}
+.cardapio-entradas{
+    background-image: url(img/cardapio-entradas.png);
+    background-size: cover;
+}
+.cardapio-doces{
+    background-image: url(img/cardapio-doces.png);
+    background-size: cover;
 }
 .cardapio-feijoada, .cardapio-alcool, .cardapio-entradas, .cardapio-doces{
+    color: var(--whiteColor);
+    font-weight: bold;
+    font-size: 25px;
+    border: 2px solid red;
     padding: 15px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    cursor: pointer;
+    transition: .2s;
+}
+.cardapio-feijoada:hover, .cardapio-alcool:hover, .cardapio-entradas:hover, .cardapio-doces:hover{
+    transform: scale(1.05);
 }
 .cardapio-btn{
     background-color: red;
@@ -162,9 +204,113 @@ header img{
     border: none;
     border-radius: 5px;
     padding: 5px 20px;
-    cursor: pointer;
     transition: .5s;
+    cursor: pointer;
 }
 .cardapio-btn:hover{
     transform: scale(1.1);
 }
+/* ------------------------------------------------------------------------------------------------------------------- */
+.eventos{
+    width: 100%;
+    /* height: 90vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, rgba(202,129,6,0.7), rgba(0,0,0)), url(img/papelDeParede.png);
+    color: var(--whiteColor);
+}
+.eventos h2{
+    color:  var(--whiteColor);
+    font-size: 8rem;
+    font-family: var(--fontePesada);
+    letter-spacing: 15px;
+    align-self: flex-end;
+}
+.eventos-colunas{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+}
+.eventos-esquerda, .eventos-centro, .eventos-direita{
+    color: var(--whiteColor);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: .2s;
+}
+.eventos-esquerda:hover, .eventos-centro:hover, .eventos-direita:hover{
+    transform: scale(1.05);
+}
+.eventos-esquerda{
+    background-image: url(img/eventos-domino.png);
+    background-size: cover;
+    width: 400px;
+    height: 470px;
+}
+.eventos-centro{
+    background-image: url(img/eventos-sinuca.png);
+    background-size: cover;
+    width: 420px;
+    height: 500px;
+}
+.eventos-direita{
+    background-image: url(img/eventos-truco.png);
+    background-size: cover;
+    width: 400px;
+    height: 470px;
+}
+.eventos-btn{
+    background-color: red;
+    color: var(--whiteColor);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+.eventos-btn:hover{
+    transform: scale(1.1);
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+footer{
+    width: 100%;
+    height: 50vh;
+    background-color: #171717;
+    color: var(--whiteColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+footer h3{
+    margin: 10vh 0 2vh 0;
+}
+.footer-superior{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer-superior img{
+    width: 250px;
+}
+.footer-icones{
+    font-size: 2rem;
+    color: red;
+}
+.footer-inferior{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
