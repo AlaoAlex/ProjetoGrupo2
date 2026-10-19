@@ -134,7 +134,7 @@ header img{
 /* ------------------------------------------------------------------------------------------------------------------- */
 .cardapio{
     width: 100%;
-    background-color: #e4d5d5;
+    background-image: linear-gradient(rgba(0,0,0,0.75)), url(img/Bar\ do\ Tigrão_\ Sabores\ e\ Resenha.png);
     display: flex;
     flex-direction: column;
 }
